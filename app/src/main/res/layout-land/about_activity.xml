@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:animateLayoutChanges="true"
+    tools:context=".Activities.AboutActivity">
+
+    <ImageView
+        android:id="@+id/main_photo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="3"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/img" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="8dp">
+
+
+            <ImageView
+                android:id="@+id/job_logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                app:srcCompat="@drawable/ic_baseline_manage_accounts_24" />
+
+            <TextView
+                android:id="@+id/job_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/job_logo"
+                android:text="@string/job_text" />
+
+            <ImageView
+                android:id="@+id/skills_logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/job_logo"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="8dp"
+                app:srcCompat="@drawable/ic_baseline_computer_24" />
+
+            <TextView
+                android:id="@+id/skills_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/job_logo"
+                android:layout_marginTop="12dp"
+                android:layout_toEndOf="@id/skills_logo"
+                android:text="@string/skills_text" />
+
+            <ImageView
+                android:id="@+id/hobby_logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/skills_text"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="8dp"
+                app:srcCompat="@drawable/ic_baseline_videogame_asset_24" />
+
+            <TextView
+                android:id="@+id/hobby_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/skills_text"
+                android:layout_marginTop="12dp"
+                android:layout_toEndOf="@id/hobby_logo"
+                android:text="@string/hobby_text" />
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/separator_top"
+            android:layout_width="fill_parent"
+            android:layout_height="0.7dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="16dp"
+            android:background="#ED5959"
+            android:visibility="visible" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="8dp"
+            android:drawableBottom="@color/black"
+            android:text="@string/lorem_text" />
+
+        <View
+            android:id="@+id/separator_bot"
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="16dp"
+            android:background="#ED5959"
+            android:visibility="visible" />
+
+        <EditText
+            android:id="@+id/msg_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="8dp"
+            android:hint="@string/hint_for_msg"
+            android:textSize="10sp" />
+
+        <Button
+            android:id="@+id/submit_message_btn"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="8dp"
+            android:text="@string/send_msg"
+            android:textColor="#EA4040" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+
+            <ImageView
+                android:id="@+id/vk_logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:onClick="openSocial"
+                app:srcCompat="@drawable/vk" />
+
+            <ImageView
+                android:id="@+id/tg_logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:onClick="openSocial"
+                app:srcCompat="@drawable/telegram" />
+
+            <ImageView
+                android:id="@+id/inst_logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:onClick="openSocial"
+                app:srcCompat="@drawable/instagram30" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Pavel B</string>
+    <string name="job_text">Service engineer 1C</string>
+    <string name="skills_text">Java Core , Android Junior, HtmlCss</string>
+    <string name="hobby_text">Computer video games, board games</string>
+    <string name="lorem_text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantitatemrem ipsum pit laboriosam, nisi ut</string>
+    <string name="hint_for_msg">Enter a message</string>
+    <string name="send_msg">SEND MESSAGE</string>
+    <string name="about_me">About me</string>
+    <string name="news_image_description">news image</string>
+    <string name="news_activity_label">News</string>
+    <string name="visit_card_activity_label">Visit card</string>
+</resources>
