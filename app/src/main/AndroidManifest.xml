@@ -12,8 +12,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.VisitCard">
         <activity android:name=".Activities.NewsDetailsActivity"
+            android:theme="@style/MyTheme.NoActionbar"
             android:parentActivityName=".Activities.NewsListActivity"
-            ></activity>
+            >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Activities.NewsListActivity" />
+
+        </activity>
         <activity android:name=".Activities.NewsListActivity"
             android:launchMode="singleTop"
             android:label="@string/news_activity_label"
