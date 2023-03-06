@@ -19,6 +19,7 @@ import com.ps_bn.visitcard.Data.NewsItem;
 import com.ps_bn.visitcard.Data.RecyclerViewAdapter;
 import com.ps_bn.visitcard.R;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -52,11 +53,12 @@ public class NewsListActivity extends AppCompatActivity {
                 NewsItem item = dataArray.get(position);
                 String title = item.getTitle();
                 String fullText = item.getFullText();
-                String date = String.valueOf(item.getPublishDate());
+                SimpleDateFormat formatter = new SimpleDateFormat("MM.dd.yyyy");
+                String strDate = formatter.format(item.getPublishDate());
                 Intent toDetailsActivity = new Intent(getApplicationContext(), NewsDetailsActivity.class);
                 toDetailsActivity.putExtra("title",title);
                 toDetailsActivity.putExtra("fulltext",fullText);
-                toDetailsActivity.putExtra("date",date);
+                toDetailsActivity.putExtra("date",strDate);
                 toDetailsActivity.putExtra("category",item.getCategory().getName());
                 toDetailsActivity.putExtra("image_url",item.getImageUrl());
                 startActivity(toDetailsActivity);

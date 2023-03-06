@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.VisitCard">
         <activity android:name=".Activities.NewsDetailsActivity"
-            android:theme="@style/MyTheme.NoActionbar"
+            android:theme="@style/Theme.DesignDemo"
             android:parentActivityName=".Activities.NewsListActivity"
             >
             <meta-data
